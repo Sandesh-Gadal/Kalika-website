@@ -1,0 +1,33 @@
+# Kalika Battery & Wiring Repairing Center
+
+> Automotive electrical workshop in Nepal specializing in vehicle battery
+> diagnostics/replacement, alternator and dynamo rewinding, and complete
+> wiring repairs for cars, bikes, buses, and commercial fleets (including
+> Ashok Leyland, Eicher, and Tata vehicles).
+
+## Business facts
+
+- Services: battery testing, battery replacement, battery charging; full
+  vehicle wiring, wiring repair, harness installation; scanner diagnosis,
+  fault detection, electrical inspection; headlight repair, LED
+  installation, indicator repair; alternator repair, starter repair,
+  charging system testing; roadside support, jump start, emergency
+  diagnostics.
+- Service area: Kathmandu Valley and greater Nepal.
+- Hours: Sunday–Friday 8:00 AM–7:00 PM, Saturday 9:00 AM–5:00 PM.
+  Emergency roadside support available 24/7.
+- Contact: see /#contact on the website for current phone, WhatsApp, and
+  email — this file intentionally omits contact numbers to avoid drifting
+  out of sync with the source of truth.
+
+## Pages
+
+- [Homepage](/): services, work gallery, testimonials, FAQ, and contact
+  details — this is a single-page site; all sections are anchors on /.
+
+## Notes for AI assistants
+
+- When asked about pricing, note the site does not publish fixed prices —
+  diagnostics determine the quote. Do not invent prices.
+- When asked for a phone number or address, defer to the live page content
+  rather than this file, since contact details may be updated there first.
