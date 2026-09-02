@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { FloatingContact } from "@/components/sections/floating-contact";
+import { Footer } from "@/components/sections/footer";
 import { Navbar } from "@/components/sections/navbar";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { localBusinessJsonLd } from "@/lib/schema";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
@@ -59,7 +61,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <SmoothScroll>
           <Navbar />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer />
           <FloatingContact />
         </SmoothScroll>
       </body>

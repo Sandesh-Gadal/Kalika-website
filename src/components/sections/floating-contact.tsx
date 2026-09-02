@@ -1,10 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { MessageCircle, Phone, QrCode } from "lucide-react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+import { ArrowUp, MessageCircle, Phone, QrCode } from "lucide-react";
+import { useLenis } from "lenis/react";
+import { useState } from "react";
 import { contact, whatsappHref } from "@/lib/contact";
 
 export function FloatingContact() {
+  const [showTop, setShowTop] = useState(false);
+  const { scrollY } = useScroll();
+  const lenis = useLenis();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setShowTop(latest > 500);
+  });
+
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* <motion.div
@@ -42,6 +57,23 @@ export function FloatingContact() {
       >
         <MessageCircle className="h-6 w-6" />
       </motion.a>
+
+      <AnimatePresence>
+        {showTop && (
+          <motion.button
+            onClick={() => lenis?.scrollTo(0, { duration: 1.2 })}
+            aria-label="Scroll to top"
+            initial={{ opacity: 0, y: 10, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.8 }}
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-primary shadow-lg"
+          >
+            <ArrowUp className="h-5 w-5" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

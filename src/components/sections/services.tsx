@@ -1,23 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import {
-  AlertCircle,
-  Battery,
-  Cable,
-  Lightbulb,
-  Search,
-  Zap,
-} from "lucide-react";
+  BatteryServiceIcon,
+  ChargingServiceIcon,
+  DiagnosticsServiceIcon,
+  EmergencyServiceIcon,
+  LightingServiceIcon,
+  WiringServiceIcon,
+} from "@/components/icons";
 
 const categories = [
   {
-    icon: Battery,
+    icon: BatteryServiceIcon,
     title: "Battery Services",
     items: ["Battery Testing", "Battery Replacement", "Battery Charging"],
   },
   {
-    icon: Cable,
+    icon: WiringServiceIcon,
     title: "Wiring Services",
     items: [
       "Full Vehicle Wiring",
@@ -26,17 +27,17 @@ const categories = [
     ],
   },
   {
-    icon: Search,
+    icon: DiagnosticsServiceIcon,
     title: "Electrical Diagnostics",
     items: ["Scanner Diagnosis", "Fault Detection", "Electrical Inspection"],
   },
   {
-    icon: Lightbulb,
+    icon: LightingServiceIcon,
     title: "Lighting Systems",
     items: ["Headlight Repair", "LED Installation", "Indicator Repair"],
   },
   {
-    icon: Zap,
+    icon: ChargingServiceIcon,
     title: "Starting & Charging Systems",
     items: [
       "Alternator Repair",
@@ -45,16 +46,32 @@ const categories = [
     ],
   },
   {
-    icon: AlertCircle,
+    icon: EmergencyServiceIcon,
     title: "Emergency Services",
     items: ["Roadside Support", "Jump Start", "Emergency Diagnostics"],
   },
 ];
 
 export function Services() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const blobY = useTransform(scrollYProgress, [0, 1], ["-8%", "12%"]);
+
   return (
-    <section id="services" className="scroll-mt-24 bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section
+      id="services"
+      ref={ref}
+      className="relative scroll-mt-24 overflow-hidden bg-white py-24"
+    >
+      <motion.div
+        aria-hidden
+        style={{ y: blobY }}
+        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-secondary/5 blur-[100px]"
+      />
+      <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-14 text-center">
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
             Our Services

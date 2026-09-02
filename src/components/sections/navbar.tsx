@@ -6,18 +6,24 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { Menu, Phone, Wrench, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
+import { LogoMark } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { contact } from "@/lib/contact";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#services", label: "Services" },
+  { href: "/work", label: "Our Work" },
+  { href: "/about", label: "About" },
+  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
+
+const MotionLink = motion.create(Link);
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,7 +46,7 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#home" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <motion.span
             whileHover={{ rotate: -18, scale: 1.08 }}
             transition={{ type: "spring", stiffness: 300, damping: 12 }}
@@ -48,7 +54,7 @@ export function Navbar() {
               scrolled ? "bg-primary text-white" : "bg-white/15 text-white"
             }`}
           >
-            <Wrench className="h-5 w-5" />
+            <LogoMark className="h-5 w-5" />
           </motion.span>
           <span
             className={`text-sm font-bold transition-colors ${
@@ -57,11 +63,11 @@ export function Navbar() {
           >
             Kalika Battery &amp; Wiring
           </span>
-        </a>
+        </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex lg:gap-6">
           {links.map((link, i) => (
-            <motion.a
+            <MotionLink
               key={link.href}
               href={link.href}
               initial={{ opacity: 0, y: -8 }}
@@ -73,11 +79,11 @@ export function Navbar() {
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-secondary transition-all duration-300 group-hover:w-full" />
-            </motion.a>
+            </MotionLink>
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button
             href={contact.phoneHref}
             variant="primary"
@@ -93,7 +99,7 @@ export function Navbar() {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setOpen((o) => !o)}
-          className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`}
+          className={`lg:hidden ${scrolled ? "text-foreground" : "text-white"}`}
           aria-label="Toggle menu"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -107,18 +113,18 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden bg-white md:hidden"
+            className="overflow-hidden bg-white lg:hidden"
           >
             <div className="flex flex-col gap-1 px-6 pb-6">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className="py-2 text-sm font-medium text-slate-700"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <Button href={contact.phoneHref} variant="primary" className="mt-2 w-full">
                 <Phone className="h-4 w-4" />

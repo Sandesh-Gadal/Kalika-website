@@ -32,16 +32,17 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-24 bg-white py-24">
+    <section id="faq" className="scroll-mt-24 bg-white pb-24 pt-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }}
       />
       <div className="mx-auto max-w-3xl px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+          <p className="text-sm font-medium text-slate-400">FAQ</p>
+          <h1 className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">
             Frequently Asked Questions
-          </h2>
+          </h1>
         </div>
         <div className="flex flex-col divide-y divide-slate-200 rounded-2xl border border-slate-200">
           {faqs.map((item, i) => {

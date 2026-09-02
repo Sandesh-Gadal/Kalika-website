@@ -33,7 +33,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
           </span>
-          Live &amp; On-Call — 24/7 Emergency Response
+          🔧 Heavy Vehicle Electrical Specialist
         </motion.span>
 
         <motion.h1
@@ -42,10 +42,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl"
         >
-          Power Your Vehicle.
+          Heavy Vehicle Electrical Solutions
           <br />
           <span className="bg-linear-to-r from-secondary via-sky-300 to-secondary bg-clip-text text-transparent">
-            Wired Right.
+            From Testing to Spare Parts.
           </span>
         </motion.h1>
 
@@ -55,9 +55,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-xl text-lg text-white/60"
         >
-          Battery diagnostics, replacement, and complete vehicle wiring
-          repairs — Kalika Battery &amp; Wiring Repairing Center keeps
-          drivers and fleets moving, with certified precision.
+          Specialized in School Buses • Trucks • Buses • Tractors • Hyva —
+          starter &amp; alternator repair, complete DC wiring, and genuine
+          spare parts for Tata, Eicher, Ashok Leyland, Mahindra, SML, and
+          BharatBenz fleets.
         </motion.p>
 
         <motion.div

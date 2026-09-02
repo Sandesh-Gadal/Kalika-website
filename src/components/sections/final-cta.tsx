@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Zap } from "lucide-react";
+import { Phone, Zap } from "lucide-react";
+import { LocationMap } from "@/components/location-map";
 import { Button } from "@/components/ui/button";
-import { contact, mapsUrl, whatsappHref } from "@/lib/contact";
+import { contact, whatsappHref } from "@/lib/contact";
 
 const urgencyPoints = [
   "Same Day Service Available",
@@ -11,15 +12,6 @@ const urgencyPoints = [
   "Limited Daily Service Slots",
   "Fast Turnaround",
 ];
-
-// OpenStreetMap's embed needs no API key (unlike Google's Maps Embed API).
-// Swap contact.lat/lng for the real workshop coordinates once confirmed.
-const OSM_SPAN = 0.02;
-const mapEmbedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${
-  contact.lng - OSM_SPAN
-}%2C${contact.lat - OSM_SPAN}%2C${contact.lng + OSM_SPAN}%2C${
-  contact.lat + OSM_SPAN
-}&layer=mapnik&marker=${contact.lat}%2C${contact.lng}`;
 
 export function FinalCta() {
   return (
@@ -71,30 +63,9 @@ export function FinalCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="relative overflow-hidden rounded-2xl border border-white/15 shadow-2xl shadow-black/30"
+          className="overflow-hidden rounded-2xl border border-white/15 shadow-2xl shadow-black/30"
         >
-          <iframe
-            title="Workshop location map"
-            src={mapEmbedSrc}
-            className="h-80 w-full grayscale-15 lg:h-96"
-            style={{ border: 0 }}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-          <a
-            href={mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl bg-white/95 px-4 py-3 text-primary shadow-lg backdrop-blur-sm transition-colors hover:bg-white"
-          >
-            <MapPin className="h-5 w-5 shrink-0 text-secondary" />
-            <div className="min-w-0">
-              <div className="truncate text-sm font-semibold">
-                {contact.address}
-              </div>
-              <div className="text-xs text-primary/70">Get directions</div>
-            </div>
-          </a>
+          <LocationMap className="h-80 lg:h-96" />
         </motion.div>
       </div>
     </section>
