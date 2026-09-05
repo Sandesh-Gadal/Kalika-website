@@ -15,6 +15,7 @@ export const stockPhotos = {
   tipperTruck: "15488010", // tipper/dumper truck offloading, rural India
   dynamoRewind: "16048266", // technician rewinding a dynamo/motor armature
   batteryChargingClamps: "5572260", // jumper cable clamps on a car battery
+  mechanicPortrait: "31295161", // confident mechanic, arms crossed, dark moody workshop lighting
 } as const;
 
 export type StockPhotoKey = keyof typeof stockPhotos;

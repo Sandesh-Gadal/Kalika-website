@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <Hero />
       <Highlights />
-      <Services />
       <ReadyToFit />
-      <ProblemSolution />
+      <Services />
+      {/* <ProblemSolution /> */}
       <Testimonials />
       <Partners />
       {/* <FinalCta /> */}

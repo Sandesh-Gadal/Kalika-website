@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LogoMark } from "@/components/icons";
 import { Button } from "@/components/ui/button";
@@ -15,24 +16,32 @@ import { contact } from "@/lib/contact";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/#services", label: "Services" },
+  // { href: "/#services", label: "Services" },
   { href: "/work", label: "Our Work" },
   { href: "/about", label: "About" },
-  { href: "/#testimonials", label: "Testimonials" },
-  { href: "/faq", label: "FAQ" },
+  // { href: "/#testimonials", label: "Testimonials" },
+  // { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
 const MotionLink = motion.create(Link);
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  // Only the homepage has a full-viewport dark hero for the navbar to sit
+  // transparently over — every other page starts with a light background,
+  // so the transparent style there just made the navbar unreadable. Those
+  // pages get the solid "scrolled" look immediately instead.
+  const isHome = pathname === "/";
+  const [scrolledPastTop, setScrolledPastTop] = useState(false);
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 40);
+    setScrolledPastTop(latest > 40);
   });
+
+  const scrolled = isHome ? scrolledPastTop : true;
 
   return (
     <motion.header

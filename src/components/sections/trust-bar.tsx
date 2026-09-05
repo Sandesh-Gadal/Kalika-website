@@ -5,7 +5,7 @@ import { Award, Clock, ThumbsUp, Wrench } from "lucide-react";
 
 const stats = [
   { icon: Wrench, value: "5,000+", label: "Vehicles Serviced" },
-  { icon: Award, value: "10+", label: "Years Experience" },
+  { icon: Award, value: "20+", label: "Years Experience" },
   { icon: ThumbsUp, value: "98%", label: "Customer Satisfaction" },
   { icon: Clock, value: "24/7", label: "Emergency Support" },
 ];

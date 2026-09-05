@@ -19,7 +19,9 @@ export function localBusinessJsonLd() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Kathmandu",
+      streetAddress: contact.address,
+      addressLocality: "Bharatpur",
+      addressRegion: "Bagmati Province",
       addressCountry: "NP",
     },
     geo: {
@@ -55,6 +57,24 @@ export function localBusinessJsonLd() {
       name: "Emergency roadside support",
       value: "24/7",
     },
+  };
+}
+
+export function servicesJsonLd(services: { title: string; items: string[] }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: services.map((service, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: service.title,
+        provider: { "@type": "AutoRepair", name: siteConfig.name },
+        areaServed: "NP",
+        description: service.items.join(", "),
+      },
+    })),
   };
 }
 

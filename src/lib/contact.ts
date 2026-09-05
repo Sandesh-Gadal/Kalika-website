@@ -1,13 +1,15 @@
-// TODO: replace with the workshop's real contact details before launch,
-// including the real lat/lng (currently a placeholder pin in Kathmandu).
+// TODO: replace phoneDisplay/phoneHref with the workshop's real phone number,
+// and confirm the exact lat/lng once known (currently Bharatpur city center,
+// not the precise workshop pin).
 export const contact = {
   phoneDisplay: "+977 98X-XXX-XXX",
   phoneHref: "tel:+97798XXXXXXX",
   whatsappNumber: "9779821275659",
+  whatsappDisplay: "+977 982-1275659",
   email: "info@kalikabattery.com",
-  address: "Kalika Battery & Wiring Repairing Center, Nepal",
-  lat: 27.7172,
-  lng: 85.324,
+  address: "Bharatpur-9, Chitwan, Narayani Zone, Nepal",
+  lat: 27.6588,
+  lng: 84.4392,
 };
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${contact.lat},${contact.lng}`;

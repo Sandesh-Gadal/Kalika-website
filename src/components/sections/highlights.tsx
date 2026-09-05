@@ -105,6 +105,9 @@ export function Highlights() {
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="mx-auto max-w-3xl px-6 pt-20 text-center">
+          <span className="mb-3 inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-secondary">
+            Why Choose Us
+          </span>
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
             Why Workshops &amp; Fleets Choose Us
           </h2>

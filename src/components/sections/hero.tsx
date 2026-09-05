@@ -7,7 +7,7 @@ import { contact, whatsappHref } from "@/lib/contact";
 
 const stats = [
   { label: "Vehicles Serviced", value: "5,000+" },
-  { label: "Years Experience", value: "10+" },
+  { label: "Years Experience", value: "20+" },
   { label: "Satisfaction", value: "98%" },
   { label: "Support", value: "24/7" },
 ];
