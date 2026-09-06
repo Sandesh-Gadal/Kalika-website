@@ -45,12 +45,18 @@ body {
   }
 }
 
-.animate-marquee-left {
-  animation: marquee-left var(--marquee-duration, 30s) linear infinite;
-}
+/* Tailwind puts its own utilities (including `group-hover:[...]`) inside a
+   cascade layer; unlayered rules always beat layered ones regardless of
+   specificity, so these need to live in the same layer or group-hover can
+   never override them to pause the animation. */
+@layer utilities {
+  .animate-marquee-left {
+    animation: marquee-left var(--marquee-duration, 30s) linear infinite;
+  }
 
-.animate-marquee-right {
-  animation: marquee-right var(--marquee-duration, 30s) linear infinite;
+  .animate-marquee-right {
+    animation: marquee-right var(--marquee-duration, 30s) linear infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -58,4 +64,13 @@ body {
   .animate-marquee-right {
     animation: none;
   }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
