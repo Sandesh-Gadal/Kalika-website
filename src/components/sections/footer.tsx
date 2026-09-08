@@ -68,14 +68,6 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Kalika Battery &amp; Wiring
             Repairing Center. All rights reserved.
           </span>
-          <div className="flex gap-4">
-            <a href="#" aria-label="Facebook" className="hover:text-white">
-              Facebook
-            </a>
-            <a href="#" aria-label="Instagram" className="hover:text-white">
-              Instagram
-            </a>
-          </div>
         </div>
       </div>
     </footer>

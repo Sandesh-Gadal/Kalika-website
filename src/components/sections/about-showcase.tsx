@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
-import { pexelsUrl } from "@/lib/images";
 
 const readings = [
   { label: "Starter", value: "12.8 kW" },
@@ -24,22 +23,22 @@ export function AboutShowcase() {
           <div className="relative aspect-video overflow-hidden rounded-2xl sm:aspect-21/9">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={pexelsUrl("underCarLift", 1200)}
-              alt="Mechanic inspecting a heavy vehicle at the Bharatpur workshop bay"
+              src="/workshop/battery-shelf-bharatpur.jpg"
+              alt="Shelves of tested and reconditioned batteries and wiring stock at Kalika's Bharatpur workshop"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
               <span className="mb-1 flex items-center gap-1.5 text-xs font-medium text-white/80">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                Live Bay Inspection &amp; Diagnostic Bench
+                From Our Workshop Floor
               </span>
               <div className="text-lg font-bold sm:text-xl">
-                Bharatpur Commercial Hub Bay No. 2
+                Bharatpur-9 Workshop &amp; Battery Bench
               </div>
               <p className="mt-0.5 max-w-md text-xs text-white/70">
-                Dedicated high-amperage testing rigs for 24V Tata, Eicher, and
-                multi-axle tipper electrical assemblies.
+                Tested and reconditioned batteries, wiring stock, and
+                charging gear — straight off our own shelves.
               </p>
             </div>
           </div>

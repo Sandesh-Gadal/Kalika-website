@@ -1,4 +1,5 @@
 import { FinalCta } from "@/components/sections/final-cta";
+import { GoogleReviews } from "@/components/sections/google-reviews";
 import { Hero } from "@/components/sections/hero";
 import { Highlights } from "@/components/sections/highlights";
 import { Partners } from "@/components/sections/partners";
@@ -14,9 +15,9 @@ export default function Home() {
       <Services />
       <Highlights />
       {/* <ReadyToFit /> */}
-      
       {/* <ProblemSolution /> */}
       <Testimonials />
+      <GoogleReviews />
       <Partners />
       {/* <FinalCta /> */}
     </>

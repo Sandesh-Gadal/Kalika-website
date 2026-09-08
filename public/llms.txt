@@ -1,9 +1,10 @@
 # Kalika Battery & Wiring Repairing Center
 
-> Automotive electrical workshop in Nepal specializing in vehicle battery
-> diagnostics/replacement, alternator and dynamo rewinding, and complete
-> wiring repairs for cars, bikes, buses, and commercial fleets (including
-> Ashok Leyland, Eicher, and Tata vehicles).
+> Heavy vehicle electrical specialist based in Bharatpur, Chitwan, Nepal —
+> battery diagnostics/replacement, alternator and dynamo rewinding, and
+> complete wiring repairs for trucks, buses, tractors, and commercial fleets
+> (Tata, Eicher, Ashok Leyland, Mahindra, SML, and BharatBenz vehicles), plus
+> cars and bikes.
 
 ## Business facts
 
@@ -13,7 +14,8 @@
   installation, indicator repair; alternator repair, starter repair,
   charging system testing; roadside support, jump start, emergency
   diagnostics.
-- Service area: Kathmandu Valley and greater Nepal.
+- Service area: Bharatpur and Chitwan district, with heavy-vehicle fleet
+  clients (trucks, buses, tractors) served across Nepal.
 - Hours: Sunday–Friday 8:00 AM–7:00 PM, Saturday 9:00 AM–5:00 PM.
   Emergency roadside support available 24/7.
 - Contact: see /#contact on the website for current phone, WhatsApp, and
