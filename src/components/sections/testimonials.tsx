@@ -5,27 +5,27 @@ import { Quote, Star, UserCircle2 } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ramesh Thapa",
-    vehicle: "Toyota Hilux",
-    service: "Complete Wiring Repair",
+    name: "Dipesh Poudel",
+    vehicle: "Tata 407 Truck",
+    service: "Alternator & Dynamo Rewinding",
     review:
-      "My vehicle had recurring wiring issues that other workshops couldn't solve. Kalika Battery & Wiring fixed everything professionally.",
+      "Our truck's alternator died completely on the Mugling highway. Kalika rewound the dynamo the same day and got us back on the road — didn't even have to buy a new one. Fair price, honest work.",
     rating: 5,
   },
   {
-    name: "Sita Gurung",
-    vehicle: "Hyundai Creta",
-    service: "Battery Replacement",
+    name: "Sabina Tamang",
+    vehicle: "Ashok Leyland Bus (Bharatpur–Kathmandu route)",
+    service: "Full Wiring Harness Replacement",
     review:
-      "Fast, honest diagnosis and a same-day battery replacement. Haven't had a starting issue since.",
+      "Our bus had a short circuit almost every week. Other places just kept patching wires. Kalika traced the actual fault and replaced the full harness properly — no problems since.",
     rating: 5,
   },
   {
-    name: "Prakash Adhikari",
-    vehicle: "Fleet of 8 Delivery Vans",
-    service: "Fleet Maintenance",
+    name: "Krishna Bahadur Magar",
+    vehicle: "Sonalika Tractor",
+    service: "Battery & Starter Motor Repair",
     review:
-      "We service our entire delivery fleet here. Reliable scheduling and they know commercial vehicles inside out.",
+      "Tractor wouldn't start right in the middle of paddy season, very bad timing. They came same day, fixed the starter motor and tested the battery properly before handing it back.",
     rating: 5,
   },
 ];

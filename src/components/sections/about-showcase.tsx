@@ -21,7 +21,7 @@ export function AboutShowcase() {
           className="relative"
         >
           <div className="relative aspect-video overflow-hidden rounded-2xl sm:aspect-21/9">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/workshop/battery-shelf-bharatpur.jpg"
               alt="Shelves of tested and reconditioned batteries and wiring stock at Kalika's Bharatpur workshop"
