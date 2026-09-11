@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import { FloatingContact } from "@/components/sections/floating-contact";
 import { Footer } from "@/components/sections/footer";
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <FloatingContact />
         </SmoothScroll>
       </body>
+      <GoogleAnalytics gaId="G-R7CK6PJ8R4" />
     </html>
   );
 }
